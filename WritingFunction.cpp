@@ -12,6 +12,7 @@ int main() {
     return 0;
 }
 void printMenu() {
+    // Display menu items
     std::cout << "\nWelcome to our restaurant!\n";
     std::cout << "Here's our menu:\n";
     std::cout << "1. Burger - $10.99\n";
