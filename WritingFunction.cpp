@@ -24,6 +24,7 @@ int getChoice() {
     printMenu();
     int choice;
     std::cin >> choice;
+    // Validate the user's input
     if (!std::cin || choice < 1 || choice > 4) {
         std::cout << "Invalid choice. Please enter a valid number.\n";
         return -1;
