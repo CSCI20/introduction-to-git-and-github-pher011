@@ -1,16 +1,19 @@
 #include <iostream>
 #include <map>
 #include <string>
+
 void printMenu();
 int getChoice();
+
 int main() {
-    int choice = getChoice();
+    int choice = getChoice();  // local to main()
     if (choice == -1) {
         return 0;
     }
     std::cout << "You chose: " << choice << ". Enjoy your meal!\n";
     return 0;
 }
+
 void printMenu() {
     // Display menu items
     std::cout << "\nWelcome to our restaurant!\n";
@@ -21,9 +24,10 @@ void printMenu() {
     std::cout << "4. Spaghetti - $8.00\n";
     std::cout << "\n";
 }
+
 int getChoice() {
     printMenu();
-    int choice;
+    int choice;  // local to getChoice()
     std::cin >> choice;
     // Validate the user's input
     if (!std::cin || choice < 1 || choice > 4) {
